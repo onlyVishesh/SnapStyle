@@ -244,7 +244,7 @@ const DesignConfigurator = ({
                   }}
                 >
                   <Label>Color: {options.color.label}</Label>
-                  <div className="mt-3 flex items-center space-x-3">
+                  <div className="mt-3 flex items-center gap-3 flex-wrap">
                     {COLORS.map((color) => (
                       <RadioGroup.Option
                         key={color.label}

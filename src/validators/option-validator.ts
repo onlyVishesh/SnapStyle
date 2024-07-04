@@ -1,14 +1,21 @@
 import { PRODUCT_PRICES } from "@/config/products";
 
+// bg-zinc-900 border-zinc-900
+// bg-blue-600 border-blue-600
+// bg-rose-600 border-rose-600
+// bg-purple-600 border-purple-600
+// bg-green-600 border-green-600
+// bg-orange-600 border-orange-600
+
 export const COLORS = [
   { label: "Black", value: "black", tw: "zinc-900" },
-  {
-    label: "Blue",
-    value: "blue",
-    tw: "blue-950",
-  },
-  { label: "Rose", value: "rose", tw: "rose-950" },
+  { label: "Blue", value: "blue", tw: "blue-600" },
+  { label: "Rose", value: "rose", tw: "rose-600" },
+  { label: "Purple", value: "purple", tw: "purple-600" },
+  { label: "Green", value: "green", tw: "emerald-600" },
+  { label: "Orange", value: "orange", tw: "orange-600" },
 ] as const;
+
 
 export const MODELS = {
   name: "models",

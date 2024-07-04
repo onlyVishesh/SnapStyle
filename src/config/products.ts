@@ -9,4 +9,4 @@ export const PRODUCT_PRICES = {
   },
 } as const;
 
-export const BASE_PRICE = 1000_00;
+export const BASE_PRICE = 999_00;
