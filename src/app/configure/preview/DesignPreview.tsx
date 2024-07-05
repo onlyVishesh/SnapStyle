@@ -1,6 +1,7 @@
 "use client";
 
 import Phone from "@/components/Phone";
+import { buttonVariants } from "@/components/ui/button";
 import { BASE_PRICE, PRODUCT_PRICES } from "@/config/products";
 import { cn, formatPrice } from "@/lib/utils";
 import { COLORS, MODELS } from "@/validators/option-validator";
@@ -83,7 +84,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
           </div>
 
           <div className="mt-8">
-            <div className="bg-gray-50 p-6 sm:rounded-lg sm:p-8">
+            <div className="bg-gray-50 px-6 py-2 sm:rounded-lg sm:px-6 sm:py-2">
               <div className="flow-root text-sm">
                 <div className="mt-2 flex items-center justify-between py-1">
                   <p className="text-gray-600">Base price</p>
@@ -123,7 +124,10 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
 
             <div className="mt-8 flex justify-end pb-12">
               <Button
-                className="px-4 sm:px-6 lg:px-8"
+                className={buttonVariants({
+                  size: "lg",
+                  className: "items-center gap-1 flex",
+                })}
               >
                 Check out <ArrowRight className="ml-1.5 inline h-4 w-4" />
               </Button>
