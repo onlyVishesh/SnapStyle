@@ -56,27 +56,29 @@ export const createCheckoutSession = async ({
     });
   }
 
-  const product = await stripe.products.create({
-    name: "Custom iPhone Case",
-    images: [configuration.imageUrl],
-    default_price_data: {
-      currency: "USD",
-      unit_amount: price,
-    },
-  });
+  // const product = await stripe.products.create({
+  //   name: "Custom iPhone Case",
+  //   images: [configuration.imageUrl],
+  //   default_price_data: {
+  //     currency: "USD",
+  //     unit_amount: price,
+  //   },
+  // });
 
-  const stripeSession = await stripe.checkout.sessions.create({
-    success_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/thank-you?orderId=${order.id}`,
-    cancel_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/configure/preview?id=${configuration.id}`,
-    payment_method_types: ["card", "paypal"],
-    mode: "payment",
-    shipping_address_collection: { allowed_countries: ["IN", "US"] },
-    metadata: {
-      userId: user.id,
-      orderId: order.id,
-    },
-    line_items: [{ price: product.default_price as string, quantity: 1 }],
-  });
+  // const stripeSession = await stripe.checkout.sessions.create({
+  //   success_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/thank-you?orderId=${order.id}`,
+  //   cancel_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/configure/preview?id=${configuration.id}`,
+  //   payment_method_types: ["card", "paypal"],
+  //   mode: "payment",
+  //   shipping_address_collection: { allowed_countries: ["IN", "US"] },
+  //   metadata: {
+  //     userId: user.id,
+  //     orderId: order.id,
+  //   },
+  //   line_items: [{ price: product.default_price as string, quantity: 1 }],
+  // });
 
-  return { url: stripeSession.url };
+  return {
+    url: `/thank-you?orderId=${order.id}`,
+  };
 };

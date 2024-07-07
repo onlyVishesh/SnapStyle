@@ -4,7 +4,7 @@ import { PRODUCT_PRICES } from "@/config/products";
 // bg-blue-600 border-blue-600
 // bg-rose-600 border-rose-600
 // bg-purple-600 border-purple-600
-// bg-green-600 border-green-600
+// bg-emerald-600 border-emerald-600
 // bg-orange-600 border-orange-600
 
 export const COLORS = [

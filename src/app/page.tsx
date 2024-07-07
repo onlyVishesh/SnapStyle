@@ -140,8 +140,8 @@ export default function Home() {
               <div className="text-lg leading-8">
                 <p>
                   &quot;Absolutely love this case! The material is so
-                  high-quality and the print is vibrant. It's been six months
-                  and{" "}
+                  high-quality and the print is vibrant. It&apos;s been six
+                  months and{" "}
                   <span className="bg-slate-800 p-0.5 text-white">
                     it still looks brand new&apos;
                   </span>
@@ -176,7 +176,7 @@ export default function Home() {
                   &quot;Great case! It fits my phone perfectly and the design is
                   exactly what I wanted. After four months of use,{" "}
                   <span className="bg-slate-800 p-0.5 text-white">
-                    the colors haven't faded at all
+                    the colors haven&apos;t faded at all
                   </span>
                   . Will definitely buy again.&quot;
                 </p>
