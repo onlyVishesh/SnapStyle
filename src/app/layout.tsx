@@ -2,10 +2,14 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Providers from "@/components/Providers";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+  display: "auto",
+});
 
 export const metadata: Metadata = {
   title: "SnapStyle",
@@ -19,9 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <Navbar />
-        <main className="flex min-h-[calc(100vh-3.5rem-1px)] flex-col">
+        <main className="flex min-h-[calc(100vh-3.5rem-1px)] flex-col grainy-light">
           <div className="flex h-full flex-1 flex-col">
             <Providers>{children}</Providers>
           </div>
