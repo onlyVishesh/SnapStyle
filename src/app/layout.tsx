@@ -1,20 +1,16 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Providers from "@/components/Providers";
-import type { Metadata } from "next";
+import { constructMetadata } from "@/lib/utils";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-
 const roboto = Roboto({
   weight: "400",
   subsets: ["latin"],
   display: "auto",
 });
 
-export const metadata: Metadata = {
-  title: "SnapStyle",
-  description: "Your custom Case",
-};
+export const metadata = constructMetadata();
 
 export default function RootLayout({
   children,
@@ -25,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className}>
         <Navbar />
-        <main className="flex min-h-[calc(100vh-3.5rem-1px)] flex-col grainy-light">
+        <main className="grainy-light flex min-h-[calc(100vh-3.5rem-1px)] flex-col">
           <div className="flex h-full flex-1 flex-col">
             <Providers>{children}</Providers>
           </div>

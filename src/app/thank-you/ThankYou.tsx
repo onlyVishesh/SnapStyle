@@ -30,7 +30,7 @@ const ThankYou = () => {
     );
   }
 
-  const { configuration, billingAddress, shippingAddress, amount } = data;
+  const { configuration, amount } = data;
   const { color } = configuration;
 
   return (

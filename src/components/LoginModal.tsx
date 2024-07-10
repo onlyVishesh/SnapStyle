@@ -1,4 +1,7 @@
+import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
+import Image from "next/image";
 import type { Dispatch, SetStateAction } from "react";
+import { buttonVariants } from "./ui/button";
 import {
   Dialog,
   DialogContent,
@@ -6,9 +9,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "./ui/dialog";
-import Image from "next/image";
-import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
-import { buttonVariants } from "./ui/button";
 
 const LoginModal = ({
   isOpen,
@@ -23,8 +23,8 @@ const LoginModal = ({
         <DialogHeader>
           <div className="relative mx-auto mb-2 h-24 w-24">
             <Image
-              src="/snake-1.png"
-              alt="snake image"
+              src="/panda-1.png"
+              alt="panda image"
               className="object-contain"
               fill
             />

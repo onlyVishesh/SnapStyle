@@ -33,9 +33,12 @@ const PhonePreview = ({
     return () => window.removeEventListener("resize", handleResize);
   }, [ref.current]);
 
-  let caseBackgroundColor = "bg-zinc-950";
-  if (color === "blue") caseBackgroundColor = "bg-blue-950";
-  if (color === "rose") caseBackgroundColor = "bg-rose-950";
+  let caseBackgroundColor = "bg-zinc-900";
+  if (color === "blue") caseBackgroundColor = "bg-blue-600";
+  if (color === "rose") caseBackgroundColor = "bg-rose-600";
+  if (color === "purple") caseBackgroundColor = "bg-purple-600";
+  if (color === "green") caseBackgroundColor = "bg-green-600";
+  if (color === "orange") caseBackgroundColor = "bg-purple-600";
 
   return (
     <AspectRatio ref={ref} ratio={3000 / 2001} className="relative">
